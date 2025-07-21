@@ -4,6 +4,7 @@ import { ChatWindow } from "@/components/ChatWindow";
 import { MessageInput } from "@/components/MessageInput";
 import { RainEffect } from "@/components/RainEffect";
 import { toast } from "sonner";
+import cozyCafeBackground from "@/assets/cozy-cafe-background.jpg";
 
 interface Message {
   id: string;

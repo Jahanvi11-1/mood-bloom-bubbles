@@ -123,27 +123,41 @@ All colors MUST be HSL.
   background: hsl(var(--muted-foreground) / 0.5);
 }
 
-/* Cozy animated background using the uploaded image */
+/* Cozy animated background using high-quality optimized image */
 .cozy-background {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/lovable-uploads/57938c0c-28df-4d63-8953-fbe2cc2bf4ea.png');
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url('./assets/cozy-cafe-background.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
+  image-rendering: optimizeQuality;
+  filter: contrast(1.1) brightness(1.05) saturate(1.1);
 }
 
 .dark .cozy-background {
   background: 
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('/lovable-uploads/57938c0c-28df-4d63-8953-fbe2cc2bf4ea.png');
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url('./assets/cozy-cafe-background.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  filter: contrast(1.05) brightness(0.9) saturate(1.2);
+}
+
+@media (max-width: 768px) {
+  .cozy-background {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  
+  .dark .cozy-background {
+    background-attachment: scroll;
+  }
 }
 
 .cozy-background::before {
@@ -155,11 +169,12 @@ All colors MUST be HSL.
   bottom: 0;
   background: linear-gradient(
     135deg, 
-    rgba(255, 255, 255, 0.1) 0%, 
-    transparent 50%, 
-    rgba(255, 255, 255, 0.05) 100%
+    rgba(255, 255, 255, 0.05) 0%, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.03) 70%,
+    transparent 100%
   );
-  animation: floating 20s ease-in-out infinite;
+  animation: floating 25s ease-in-out infinite;
   z-index: 1;
 }
 

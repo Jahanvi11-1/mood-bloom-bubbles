@@ -58,7 +58,7 @@ export const MessageInput = ({ onSendMessage, disabled }: MessageInputProps) => 
   };
 
   return (
-    <div className="border-t bg-gradient-to-r from-background/95 to-muted/30 backdrop-blur-sm">
+    <div className="border-t bg-gradient-to-r from-background/95 to-muted/30 backdrop-blur-md border-white/20">
       {selectedFile && (
         <div className="px-4 py-2 flex items-center justify-between bg-muted/50">
           <span className="text-sm text-muted-foreground flex items-center">

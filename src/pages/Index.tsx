@@ -75,7 +75,7 @@ const Index = () => {
     <div className="h-screen flex flex-col cozy-background relative">
       <RainEffect />
       
-      <div className="flex flex-col h-full max-w-4xl mx-auto w-full relative z-20 backdrop-blur-sm bg-background/80 dark:bg-background/60">
+      <div className="flex flex-col h-full max-w-4xl mx-auto w-full relative z-20 backdrop-blur-md bg-background/70 dark:bg-background/50">
         <ChatHeader />
         
         <ChatWindow 

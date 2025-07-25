@@ -23,9 +23,9 @@ export const ChatWindow = ({ messages, isTyping }: ChatWindowProps) => {
     messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
   };
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages, isTyping]);
+  // useEffect(() => {
+  //   scrollToBottom();
+  // }, [messages, isTyping]);
 
   return (
     <div className="flex-1 overflow-hidden">
